@@ -1,0 +1,193 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>새로운 프롬프트 생성기</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body { 
+            font-family: 'Noto Sans KR', sans-serif; 
+            margin: 40px; 
+            background-color: #FFEBE1;
+            color: #5C4B51;
+        }
+        select, label, input, button, textarea { 
+            margin-bottom: 20px; 
+            font-size: 1.1em;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        select, input, textarea {
+            width: 100%;
+        }
+        textarea { height: 100px; }
+        button {
+            background-color: #FFB3A7;
+            border: none;
+            cursor: pointer;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #FF866F;
+        }
+        div {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #FFF5F3;
+        }
+    </style>
+</head>
+<body>
+<div style="width: 50%; margin: 0 auto;"><label for="Style">Style:</label>
+<select id="Style">
+<option value="Modern Flat">Modern Flat</option>
+<option value="Impressionistic">Impressionistic</option>
+<option value="Digital 3D">Digital 3D</option>
+<option value="Collage">Collage</option>
+<option value="Minimalism">Minimalism</option>
+<option value="Naive art">Naive art</option>
+<option value="Cut Paper Art or Silhouettes">Cut Paper Art or Silhouettes</option>
+<option value="Stippling or Pointillism">Stippling or Pointillism</option>
+<option value="Folk Art Inspired">Folk Art Inspired</option>
+<option value="Pop Art Inspired">Pop Art Inspired</option>
+<option value="children's book illustration">children's book illustration</option>
+<option value="bible illustrations">bible illustrations</option>
+<option value="bible characters">bible characters</option>
+<option value="Biblical drama">Biblical drama</option>
+<option value="Children's Bible stories">Children's Bible stories</option>
+<option value="Bible themed">Bible themed</option>
+<option value="Fairy tales">Fairy tales</option>
+</select>
+<label for="Artist1">Artist1:</label>
+<select id="Artist1">
+<option value="Mem Fox">Mem Fox</option>
+<option value="Sandra Boynton">Sandra Boynton</option>
+<option value="Laura Numeroff">Laura Numeroff</option>
+<option value="Jon Klassen">Jon Klassen</option>
+<option value="Richard Scarry">Richard Scarry</option>
+<option value="P.D. Eastman">P.D. Eastman</option>
+<option value="Mo Willems">Mo Willems</option>
+<option value="Peter Reynolds">Peter Reynolds</option>
+<option value="Quentin Blakee">Quentin Blakee</option>
+<option value="Robert Munsch">Robert Munsch</option>
+<option value="Shel Silverstein">Shel Silverstein</option>
+<option value="Roger Hargreaves">Roger Hargreaves</option>
+<option value="Ludwig Bemelmans">Ludwig Bemelmans</option>
+<option value="Margaret Wise Brown.">Margaret Wise Brown.</option>
+<option value="ayako rokkaku">ayako rokkaku</option>
+<option value="no one">no one</option>
+</select>
+<label for="Artist2">Artist2:</label>
+<select id="Artist2">
+<option value="Beatrix Potter">Beatrix Potter</option>
+<option value="Arnold Lobel">Arnold Lobel</option>
+<option value="Tasha Tudor">Tasha Tudor</option>
+<option value="Eric Carle">Eric Carle</option>
+<option value="Jan Brett">Jan Brett</option>
+<option value="Tomie dePaola">Tomie dePaola</option>
+<option value="Ezra Jack Keats">Ezra Jack Keats</option>
+<option value="H.A. Rey, E.H. Shepard">H.A. Rey, E.H. Shepard</option>
+<option value="Clement Hurd">Clement Hurd</option>
+<option value="Lois Ehlert">Lois Ehlert</option>
+<option value="Audrey Wood">Audrey Wood</option>
+<option value="Leo Lionni">Leo Lionni</option>
+<option value="Oliver Jeffers">Oliver Jeffers</option>
+<option value="Mary Blair">Mary Blair</option>
+<option value="Kevin Henkes">Kevin Henkes</option>
+<option value="no one">no one</option>
+</select>
+<label for="Option1">Option1:</label>
+<select id="Option1">
+<option value="Color Grading">Color Grading</option>
+<option value="Depth of Field">Depth of Field</option>
+<option value="Cinematic">Cinematic</option>
+<option value="Backlight">Backlight</option>
+<option value="Natural Lighting">Natural Lighting</option>
+<option value="HDR">HDR</option>
+<option value="Incandescent">Incandescent</option>
+<option value="Moody Lighting">Moody Lighting</option>
+<option value="Glowing">Glowing</option>
+<option value="Ektachrome">Ektachrome</option>
+<option value="Studio Lighting">Studio Lighting</option>
+<option value="golden light">golden light</option>
+<option value="soft atmospheric light">soft atmospheric light</option>
+</select>
+<label for="Option2">Option2:</label>
+<select id="Option2">
+<option value="playful poses">playful poses</option>
+<option value="romantic scenery">romantic scenery</option>
+<option value="charming">charming</option>
+<option value="soft shading">soft shading</option>
+<option value="soft gradients">soft gradients</option>
+<option value="gray and amber">gray and amber</option>
+<option value="green and crimson">green and crimson</option>
+<option value="light brown and red">light brown and red</option>
+<option value="light white and dark orange">light white and dark orange</option>
+<option value="richly colored">richly colored</option>
+<option value="cute and dreamy">cute and dreamy</option>
+<option value="childlike wonder">childlike wonder</option>
+<option value="nostalgic feeling">nostalgic feeling</option>
+<option value="innocent">innocent</option>
+<option value="Delicate and fine">Delicate and fine</option>
+<option value="furry art">furry art</option>
+</select>
+<label for="Detail level">Detail level:</label>
+<select id="Detail level">
+<option value="white background">white background</option>
+<option value="minimalistic details">minimalistic details</option>
+<option value="normal details">normal details</option>
+<option value="high details">high details</option>
+<option value="very high details">very high details</option>
+<option value="extreme level of details">extreme level of details</option>
+<option value="multiple poses and expressions">multiple poses and expressions</option>
+<option value="Dynamic Pose">Dynamic Pose</option>
+<option value="beautiful watercolor like backgrounds">beautiful watercolor like backgrounds</option>
+</select>
+<label for="Output style">Output style:</label>
+<select id="Output style">
+<option value="pen drawing">pen drawing</option>
+<option value="oil painting">oil painting</option>
+<option value="water colour painting">water colour painting</option>
+<option value="3d render">3d render</option>
+<option value="sculpture">sculpture</option>
+<option value="cartoon">cartoon</option>
+<option value="anime">anime</option>
+<option value="line art">line art</option>
+<option value="pixel art">pixel art</option>
+<option value="graffiti">graffiti</option>
+<option value="sketch">sketch</option>
+<option value="coloring page">coloring page</option>
+<option value="childlike illustrations">childlike illustrations</option>
+<option value="hand-drawn">hand-drawn</option>
+</select>
+
+        <label for="topic">이미지 주제:</label>
+        <input type="text" id="topic">
+        <button id="generateButton">생성</button>
+        <label for="output">출력:</label>
+        <textarea id="output" readonly></textarea>
+        <button id="copyButton">클립보드에 복사</button>
+    </div>
+
+    <script type="text/javascript">
+        document.getElementById("generateButton").addEventListener("click", function() {
+            const topic = document.getElementById("topic").value;
+            const values = [];
+values.push(document.getElementById("Style").value);values.push(document.getElementById("Artist1").value);values.push(document.getElementById("Artist2").value);values.push(document.getElementById("Option1").value);values.push(document.getElementById("Option2").value);values.push(document.getElementById("Detail level").value);values.push(document.getElementById("Output style").value);
+            const output = topic + ', ' + values.join(', ');
+            document.getElementById('output').value = output;
+        });
+
+        document.getElementById("copyButton").addEventListener("click", function() {
+            const outputTextarea = document.getElementById('output');
+            outputTextarea.select();
+            document.execCommand('copy');
+        });
+    </script>
+</body>
+</html>
